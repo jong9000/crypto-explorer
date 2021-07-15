@@ -12,6 +12,7 @@
 		FCCC9CD6269FC0C60061FBD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC9CD5269FC0C60061FBD6 /* ViewController.swift */; };
 		FCCC9CDB269FC0C70061FBD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCC9CDA269FC0C70061FBD6 /* Assets.xcassets */; };
 		FCCC9CDE269FC0C70061FBD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCC9CDC269FC0C70061FBD6 /* LaunchScreen.storyboard */; };
+		FCCC9CEB269FC8740061FBD6 /* CETabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC9CEA269FC8740061FBD6 /* CETabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FCCC9CDA269FC0C70061FBD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCCC9CDD269FC0C70061FBD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCCC9CDF269FC0C70061FBD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCCC9CEA269FC8740061FBD6 /* CETabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CETabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				FCCC9CE5269FC18A0061FBD6 /* Application */,
+				FCCC9CE9269FC8430061FBD6 /* Navigation */,
 				FCCC9CE6269FC1A40061FBD6 /* Resources */,
 				FCCC9CE7269FC1B20061FBD6 /* Support */,
 				FCCC9CE8269FC1F40061FBD6 /* ViewControllers */,
@@ -94,6 +97,14 @@
 				FCCC9CD5269FC0C60061FBD6 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FCCC9CE9269FC8430061FBD6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FCCC9CEA269FC8740061FBD6 /* CETabBarController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 				FCCC9CD6269FC0C60061FBD6 /* ViewController.swift in Sources */,
 				FCCC9CD2269FC0C60061FBD6 /* AppDelegate.swift in Sources */,
 				FCCC9CD4269FC0C60061FBD6 /* SceneDelegate.swift in Sources */,
+				FCCC9CEB269FC8740061FBD6 /* CETabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
