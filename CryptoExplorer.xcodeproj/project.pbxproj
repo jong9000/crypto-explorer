@@ -16,6 +16,7 @@
 		FCCC9CEF269FCA4C0061FBD6 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC9CEE269FCA4C0061FBD6 /* FavoritesVC.swift */; };
 		FCCC9CF1269FCA6A0061FBD6 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC9CF0269FCA6A0061FBD6 /* SearchVC.swift */; };
 		FCDB643226A22F2600BE57F9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB643126A22F2600BE57F9 /* NetworkManager.swift */; };
+		FCDB643526A238D700BE57F9 /* TrendingCoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB643426A238D700BE57F9 /* TrendingCoins.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FCCC9CEE269FCA4C0061FBD6 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		FCCC9CF0269FCA6A0061FBD6 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		FCDB643126A22F2600BE57F9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FCDB643426A238D700BE57F9 /* TrendingCoins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCoins.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,9 @@
 		FCCC9CD0269FC0C60061FBD6 /* CryptoExplorer */ = {
 			isa = PBXGroup;
 			children = (
-				FCDB643026A22F1000BE57F9 /* Managers */,
 				FCCC9CE5269FC18A0061FBD6 /* Application */,
+				FCDB643026A22F1000BE57F9 /* Managers */,
+				FCDB643326A238AD00BE57F9 /* Models */,
 				FCCC9CE9269FC8430061FBD6 /* Navigation */,
 				FCCC9CE6269FC1A40061FBD6 /* Resources */,
 				FCCC9CE7269FC1B20061FBD6 /* Support */,
@@ -122,6 +125,14 @@
 				FCDB643126A22F2600BE57F9 /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		FCDB643326A238AD00BE57F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCDB643426A238D700BE57F9 /* TrendingCoins.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 				FCCC9CEF269FCA4C0061FBD6 /* FavoritesVC.swift in Sources */,
 				FCCC9CED269FC9110061FBD6 /* HomeVC.swift in Sources */,
 				FCCC9CD2269FC0C60061FBD6 /* AppDelegate.swift in Sources */,
+				FCDB643526A238D700BE57F9 /* TrendingCoins.swift in Sources */,
 				FCCC9CD4269FC0C60061FBD6 /* SceneDelegate.swift in Sources */,
 				FCCC9CEB269FC8740061FBD6 /* CETabBarController.swift in Sources */,
 				FCDB643226A22F2600BE57F9 /* NetworkManager.swift in Sources */,
