@@ -15,6 +15,7 @@
 		FCCC9CED269FC9110061FBD6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC9CEC269FC9110061FBD6 /* HomeVC.swift */; };
 		FCCC9CEF269FCA4C0061FBD6 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC9CEE269FCA4C0061FBD6 /* FavoritesVC.swift */; };
 		FCCC9CF1269FCA6A0061FBD6 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC9CF0269FCA6A0061FBD6 /* SearchVC.swift */; };
+		FCDB643226A22F2600BE57F9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB643126A22F2600BE57F9 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FCCC9CEC269FC9110061FBD6 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		FCCC9CEE269FCA4C0061FBD6 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		FCCC9CF0269FCA6A0061FBD6 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		FCDB643126A22F2600BE57F9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		FCCC9CD0269FC0C60061FBD6 /* CryptoExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				FCDB643026A22F1000BE57F9 /* Managers */,
 				FCCC9CE5269FC18A0061FBD6 /* Application */,
 				FCCC9CE9269FC8430061FBD6 /* Navigation */,
 				FCCC9CE6269FC1A40061FBD6 /* Resources */,
@@ -111,6 +114,14 @@
 				FCCC9CEA269FC8740061FBD6 /* CETabBarController.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FCDB643026A22F1000BE57F9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FCDB643126A22F2600BE57F9 /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				FCCC9CD2269FC0C60061FBD6 /* AppDelegate.swift in Sources */,
 				FCCC9CD4269FC0C60061FBD6 /* SceneDelegate.swift in Sources */,
 				FCCC9CEB269FC8740061FBD6 /* CETabBarController.swift in Sources */,
+				FCDB643226A22F2600BE57F9 /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
