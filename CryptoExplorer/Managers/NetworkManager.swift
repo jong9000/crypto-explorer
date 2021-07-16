@@ -26,25 +26,23 @@ class NetworkManager {
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
       
       if let _ = error {
-        print(error)
+        print(error.debugDescription)
         return
       }
       
-      guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-        print(response)
+      guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+        print(response!.debugDescription)
         return
       }
       
-      guard let data = data else {
-        print("no data")
-        return
+      if let mimeType = httpResponse.mimeType, mimeType == "application/json", let data = data {
+        if let decodedResponse = try? JSONDecoder().decode(TrendingCoins.self, from: data) {
+          print(decodedResponse)
+        } else {
+          print("decode failed")
+        }
       }
-      
-      print(data)
-      
     }
     task.resume()
   }
-  
-  
 }
