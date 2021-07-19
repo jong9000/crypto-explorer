@@ -13,28 +13,37 @@ class CETabBarController: UITabBarController {
     super.viewDidLoad()
     
     UITabBar.appearance().tintColor = .systemGreen
-    self.setViewControllers([createHomeVC(), createSearchVC(), createFavoritesVC()], animated: false)
+    self.setViewControllers([createHomeNC(), createSearchNC(), createFavoritesNC()], animated: false)
   }
   
-  func createHomeVC() -> UINavigationController {
+  func createHomeNC() -> UINavigationController {
     let homeVC = HomeVC()
     homeVC.title = "Home"
     homeVC.tabBarItem.image = UIImage(systemName: "house")
-    return UINavigationController(rootViewController: homeVC)
+    
+    let homeNC = UINavigationController(rootViewController: homeVC)
+    homeNC.navigationBar.prefersLargeTitles = true
+    return homeNC
   }
   
-  func createSearchVC() -> UINavigationController {
+  func createSearchNC() -> UINavigationController {
     let searchVC = SearchVC()
     searchVC.title = "Search"
     searchVC.tabBarItem.image = UIImage(systemName: "magnifyingglass")
-    return UINavigationController(rootViewController: searchVC)
+    
+    let searchNC = UINavigationController(rootViewController: searchVC)
+    searchNC.navigationBar.prefersLargeTitles = true
+    return searchNC
   }
   
-  func createFavoritesVC() -> UINavigationController {
+  func createFavoritesNC() -> UINavigationController {
     let favoritesVC = FavoritesVC()
     favoritesVC.title = "Favorites"
     favoritesVC.tabBarItem.image = UIImage(systemName: "star")
-    return UINavigationController(rootViewController: favoritesVC)
+    
+    let favoritesNC = UINavigationController(rootViewController: favoritesVC)
+    favoritesNC.navigationBar.prefersLargeTitles = true
+    return favoritesNC
   }
   
 }
