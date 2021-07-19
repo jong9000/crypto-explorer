@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC1D4B4C26A63996004F9011 /* CoinDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1D4B4B26A63996004F9011 /* CoinDetailVC.swift */; };
 		FCCC9CD2269FC0C60061FBD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC9CD1269FC0C60061FBD6 /* AppDelegate.swift */; };
 		FCCC9CD4269FC0C60061FBD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC9CD3269FC0C60061FBD6 /* SceneDelegate.swift */; };
 		FCCC9CDB269FC0C70061FBD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCC9CDA269FC0C70061FBD6 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC1D4B4B26A63996004F9011 /* CoinDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailVC.swift; sourceTree = "<group>"; };
 		FCCC9CCE269FC0C60061FBD6 /* CryptoExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCC9CD1269FC0C60061FBD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCCC9CD3269FC0C60061FBD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				FCCC9CEC269FC9110061FBD6 /* HomeVC.swift */,
 				FCCC9CEE269FCA4C0061FBD6 /* FavoritesVC.swift */,
 				FCCC9CF0269FCA6A0061FBD6 /* SearchVC.swift */,
+				FC1D4B4B26A63996004F9011 /* CoinDetailVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			files = (
 				FCCC9CF1269FCA6A0061FBD6 /* SearchVC.swift in Sources */,
 				FCCC9CEF269FCA4C0061FBD6 /* FavoritesVC.swift in Sources */,
+				FC1D4B4C26A63996004F9011 /* CoinDetailVC.swift in Sources */,
 				FCCC9CED269FC9110061FBD6 /* HomeVC.swift in Sources */,
 				FCCC9CD2269FC0C60061FBD6 /* AppDelegate.swift in Sources */,
 				FCDB643526A238D700BE57F9 /* TrendingCoins.swift in Sources */,

@@ -83,11 +83,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     label.text = "Trending Coins"
     return label
   }
-  
-  func numberOfSections(in tableView: UITableView) -> Int {
-    1
-  }
-  
+    
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     coins.count
   }
@@ -96,5 +92,12 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
     cell.textLabel?.text = coins[indexPath.row].name
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let coinDetailVC = CoinDetailVC()
+    coinDetailVC.title = coins[indexPath.row].name
+    
+    navigationController?.pushViewController(coinDetailVC, animated: true)
   }
 }
