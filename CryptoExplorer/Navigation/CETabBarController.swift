@@ -16,25 +16,25 @@ class CETabBarController: UITabBarController {
     self.setViewControllers([createHomeVC(), createSearchVC(), createFavoritesVC()], animated: false)
   }
   
-  func createHomeVC() -> UIViewController {
+  func createHomeVC() -> UINavigationController {
     let homeVC = HomeVC()
     homeVC.title = "Home"
     homeVC.tabBarItem.image = UIImage(systemName: "house")
-    return homeVC
+    return UINavigationController(rootViewController: homeVC)
   }
   
-  func createSearchVC() -> UIViewController {
+  func createSearchVC() -> UINavigationController {
     let searchVC = SearchVC()
     searchVC.title = "Search"
     searchVC.tabBarItem.image = UIImage(systemName: "magnifyingglass")
-    return searchVC
+    return UINavigationController(rootViewController: searchVC)
   }
   
-  func createFavoritesVC() -> UIViewController {
+  func createFavoritesVC() -> UINavigationController {
     let favoritesVC = FavoritesVC()
     favoritesVC.title = "Favorites"
     favoritesVC.tabBarItem.image = UIImage(systemName: "star")
-    return favoritesVC
+    return UINavigationController(rootViewController: favoritesVC)
   }
   
 }

@@ -18,6 +18,7 @@ class HomeVC: UIViewController {
     view.backgroundColor = .systemBackground
     
     configureTableView()
+    constrainTableView()
     startLoad()
   }
   
@@ -26,7 +27,9 @@ class HomeVC: UIViewController {
     tableView.dataSource = self
     
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    
+  }
+  
+  func constrainTableView() {
     view.addSubview(tableView)
     tableView.translatesAutoresizingMaskIntoConstraints = false
     
