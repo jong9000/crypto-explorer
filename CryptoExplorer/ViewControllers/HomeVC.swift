@@ -23,6 +23,11 @@ class HomeVC: UIViewController {
     startLoad()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.deselectSelectedRow(animated: true)
+  }
+      
   func configureTableView() {
     tableView.delegate = self
     tableView.dataSource = self
@@ -100,4 +105,5 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     navigationController?.pushViewController(coinDetailVC, animated: true)
   }
+  
 }

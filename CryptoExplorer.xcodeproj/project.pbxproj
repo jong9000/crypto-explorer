@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC1D4B4C26A63996004F9011 /* CoinDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1D4B4B26A63996004F9011 /* CoinDetailVC.swift */; };
+		FC529E3526A6BD2600B799DB /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC529E3426A6BD2600B799DB /* UITableView+Extensions.swift */; };
 		FCCC9CD2269FC0C60061FBD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC9CD1269FC0C60061FBD6 /* AppDelegate.swift */; };
 		FCCC9CD4269FC0C60061FBD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC9CD3269FC0C60061FBD6 /* SceneDelegate.swift */; };
 		FCCC9CDB269FC0C70061FBD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCC9CDA269FC0C70061FBD6 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		FC1D4B4B26A63996004F9011 /* CoinDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailVC.swift; sourceTree = "<group>"; };
+		FC529E3426A6BD2600B799DB /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		FCCC9CCE269FC0C60061FBD6 /* CryptoExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCC9CD1269FC0C60061FBD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCCC9CD3269FC0C60061FBD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC529E3326A6BD0C00B799DB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC529E3426A6BD2600B799DB /* UITableView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FCCC9CC5269FC0C60061FBD6 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				FCCC9CE5269FC18A0061FBD6 /* Application */,
+				FC529E3326A6BD0C00B799DB /* Extensions */,
 				FCDB643026A22F1000BE57F9 /* Managers */,
 				FCDB643326A238AD00BE57F9 /* Models */,
 				FCCC9CE9269FC8430061FBD6 /* Navigation */,
@@ -212,6 +223,7 @@
 				FC1D4B4C26A63996004F9011 /* CoinDetailVC.swift in Sources */,
 				FCCC9CED269FC9110061FBD6 /* HomeVC.swift in Sources */,
 				FCCC9CD2269FC0C60061FBD6 /* AppDelegate.swift in Sources */,
+				FC529E3526A6BD2600B799DB /* UITableView+Extensions.swift in Sources */,
 				FCDB643526A238D700BE57F9 /* TrendingCoins.swift in Sources */,
 				FCCC9CD4269FC0C60061FBD6 /* SceneDelegate.swift in Sources */,
 				FCCC9CEB269FC8740061FBD6 /* CETabBarController.swift in Sources */,
