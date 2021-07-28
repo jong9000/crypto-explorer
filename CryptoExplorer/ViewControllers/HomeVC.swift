@@ -11,6 +11,7 @@ class HomeVC: UIViewController {
   
   let tableView = UITableView(frame: .zero, style: .insetGrouped)
   let cellID = "cell"
+  let url = "https://api.coingecko.com/api/v3/search/trending"
   
   var coins = [Item]()
   
@@ -20,7 +21,8 @@ class HomeVC: UIViewController {
     
     configureTableView()
     constrainTableView()
-    startLoad()
+//    startLoad()
+    fetch(url: "https://api.coingecko.com/api/v3/search/trending")
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -48,37 +50,22 @@ class HomeVC: UIViewController {
     ])
   }
   
-  func startLoad() {
-    guard let url = URL(string: "https://api.coingecko.com/api/v3/search/trending") else {
-      print("URL is invalid")
-      return
-    }
-    
-    let task = URLSession.shared.dataTask(with: url) { data, response, error in
-      if let error = error {
-        print(error)
-        return
-      }
-      
-      guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-        print(response!.debugDescription)
-        return
-      }
-      
-      if let mimeType = httpResponse.mimeType, mimeType == "application/json", let data = data {
-        if let decodedResponse = try? JSONDecoder().decode(TrendingCoins.self, from: data) {
-          self.coins = decodedResponse.coins
-          DispatchQueue.main.async {
-            self.tableView.reloadData()
-          }
-        } else {
-          print("decode failed")
+  
+  func fetch(url: String) {
+    guard let url = URL(string: url) else { return }
+    URLSession.shared.request(url: url, expecting: TrendingCoins.self) { result in
+      switch result {
+      case .success(let response):
+        self.coins = response.coins
+        DispatchQueue.main.async {
+          self.tableView.reloadData()
         }
+      case .failure(let error):
+        print(error)
       }
     }
-    task.resume()
-    
   }
+
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
@@ -95,13 +82,13 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-    cell.textLabel?.text = coins[indexPath.row].name
+    cell.textLabel?.text = coins[indexPath.row].item.name
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let coinDetailVC = CoinDetailVC()
-    coinDetailVC.title = coins[indexPath.row].name
+    coinDetailVC.title = coins[indexPath.row].item.name
     
     navigationController?.pushViewController(coinDetailVC, animated: true)
   }

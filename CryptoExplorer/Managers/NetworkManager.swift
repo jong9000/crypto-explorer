@@ -13,7 +13,7 @@ class NetworkManager {
   private let baseURL = "https://api.coingecko.com/api/v3"
   
   private init() {}
-  
+      
   func getTrending() {
     
     let endpoint = "\(baseURL)/search/trending"
