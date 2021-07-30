@@ -11,17 +11,11 @@ enum Simple: Endpoint {
   case getSimplePrice(coinID: String, vsCurrency: String)
   
   var scheme: String {
-    switch self {
-    default:
-      return "https"
-    }
+    "https"
   }
   
   var baseURL: String {
-    switch self {
-    default:
-      return "api.coingecko.com"
-    }
+    "api.coingecko.com"
   }
   
   var path: String {
@@ -41,10 +35,7 @@ enum Simple: Endpoint {
   }
   
   var method: String {
-    switch self {
-    default:
-      return "GET"
-    }
+    "GET"
   }
   
 }
