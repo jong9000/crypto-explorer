@@ -11,7 +11,6 @@ class HomeVC: UIViewController {
   
   let tableView = UITableView(frame: .zero, style: .insetGrouped)
   let cellID = "cell"
-  let url = "https://api.coingecko.com/api/v3/search/trending"
   
   var coins = [Item]()
   
@@ -22,7 +21,7 @@ class HomeVC: UIViewController {
     configureTableView()
     constrainTableView()
 //    startLoad()
-    fetch(url: "https://api.coingecko.com/api/v3/search/trending")
+    fetch()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -50,22 +49,18 @@ class HomeVC: UIViewController {
     ])
   }
   
-  
-  func fetch(url: String) {
-    guard let url = URL(string: url) else { return }
-    URLSession.shared.request(url: url, expecting: TrendingCoins.self) { result in
+  func fetch() {
+    NetworkManager.request(endpoint: Trending.topSeven) { (result: Result<TrendingCoins, Error>) in
       switch result {
       case .success(let response):
         self.coins = response.coins
-        DispatchQueue.main.async {
-          self.tableView.reloadData()
-        }
+        self.tableView.reloadData()
       case .failure(let error):
         print(error)
       }
     }
   }
-
+  
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
