@@ -25,17 +25,20 @@ enum Simple: Endpoint {
     }
   }
   
+  var method: String {
+    "GET"
+  }
+  
   var parameters: [URLQueryItem] {
     switch self {
     case .getSimplePrice(let coinID, let vsCurrency):
       return [URLQueryItem(name: "ids", value: coinID),
               URLQueryItem(name: "vs_currencies", value: vsCurrency),
+              URLQueryItem(name: "include_market_cap", value: "true"),
+              URLQueryItem(name: "include_24hr_vol", value: "true"),
+              URLQueryItem(name: "include_24hr_change", value: "true"),
+              URLQueryItem(name: "include_last_updated_at", value: "true")
       ]
     }
   }
-  
-  var method: String {
-    "GET"
-  }
-  
 }
