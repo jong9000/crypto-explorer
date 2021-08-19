@@ -20,7 +20,7 @@ class HomeVC: UIViewController {
     
     configureTableView()
     constrainTableView()
-//    startLoad()
+
     fetch()
   }
   
@@ -82,8 +82,12 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let coinDetailVC = CoinDetailVC()
-    coinDetailVC.title = coins[indexPath.row].item.name
+    let selectedCoin = coins[indexPath.row]
+    
+    let coinDetailVC = CoinDetailVC(coinID: selectedCoin.item.id)
+    
+    coinDetailVC.title = selectedCoin.item.name
+    coinDetailVC.urlString = selectedCoin.item.large
     
     navigationController?.pushViewController(coinDetailVC, animated: true)
   }
