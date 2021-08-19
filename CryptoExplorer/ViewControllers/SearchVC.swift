@@ -12,6 +12,18 @@ class SearchVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .systemBackground
+    fetch()
+  }
+  
+  func fetch() {
+    NetworkManager.request(endpoint: Coins.getCoinsList) { (result: Result<[CoinsList], Error>) in
+      switch result {
+      case .success(let response):
+        print(response)
+      case .failure(let error):
+        print(error)
+      }
+    }
   }
   
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CoinsListCoin: Codable {
+struct CoinsList: Codable {
   let id: String
   let symbol: String
   let name: String

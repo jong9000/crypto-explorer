@@ -21,12 +21,8 @@ enum Coins: Endpoint {
   var path: String {
     switch self {
     case .getCoinsList:
-      return "/coins/list"
+      return "/api/v3/coins/list"
     }
-  }
-  
-  var method: String {
-    "GET"
   }
   
   var parameters: [URLQueryItem] {
@@ -35,4 +31,9 @@ enum Coins: Endpoint {
       return []
     }
   }
+  
+  var method: String {
+    "GET"
+  }
+
 }
