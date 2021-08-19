@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC1870B426CDE97800C6F988 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1870B326CDE97800C6F988 /* Coins.swift */; };
+		FC1870B626CDED8400C6F988 /* CoinsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1870B526CDED8400C6F988 /* CoinsList.swift */; };
 		FC1D4B4C26A63996004F9011 /* CoinDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1D4B4B26A63996004F9011 /* CoinDetailVC.swift */; };
 		FC529E3526A6BD2600B799DB /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC529E3426A6BD2600B799DB /* UITableView+Extensions.swift */; };
 		FC87EB7526B2942800B4AAD0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC87EB7426B2942800B4AAD0 /* Endpoint.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC1870B326CDE97800C6F988 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
+		FC1870B526CDED8400C6F988 /* CoinsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsList.swift; sourceTree = "<group>"; };
 		FC1D4B4B26A63996004F9011 /* CoinDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailVC.swift; sourceTree = "<group>"; };
 		FC529E3426A6BD2600B799DB /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		FC87EB7426B2942800B4AAD0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			children = (
 				FC87EB7726B3CFA200B4AAD0 /* Simple.swift */,
 				FC87EB7B26B3D4D100B4AAD0 /* Trending.swift */,
+				FC1870B326CDE97800C6F988 /* Coins.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			children = (
 				FCDB643426A238D700BE57F9 /* TrendingCoins.swift */,
 				FC87EB7926B3D44500B4AAD0 /* SimplePrice.swift */,
+				FC1870B526CDED8400C6F988 /* CoinsList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,12 +254,14 @@
 			files = (
 				FC87EB7826B3CFA200B4AAD0 /* Simple.swift in Sources */,
 				FCCC9CF1269FCA6A0061FBD6 /* SearchVC.swift in Sources */,
+				FC1870B626CDED8400C6F988 /* CoinsList.swift in Sources */,
 				FCCC9CEF269FCA4C0061FBD6 /* FavoritesVC.swift in Sources */,
 				FC1D4B4C26A63996004F9011 /* CoinDetailVC.swift in Sources */,
 				FC87EB7C26B3D4D100B4AAD0 /* Trending.swift in Sources */,
 				FCCC9CED269FC9110061FBD6 /* HomeVC.swift in Sources */,
 				FCCC9CD2269FC0C60061FBD6 /* AppDelegate.swift in Sources */,
 				FC87EB7A26B3D44500B4AAD0 /* SimplePrice.swift in Sources */,
+				FC1870B426CDE97800C6F988 /* Coins.swift in Sources */,
 				FC529E3526A6BD2600B799DB /* UITableView+Extensions.swift in Sources */,
 				FCDB643526A238D700BE57F9 /* TrendingCoins.swift in Sources */,
 				FCCC9CD4269FC0C60061FBD6 /* SceneDelegate.swift in Sources */,
