@@ -24,6 +24,11 @@ class SearchVC: UIViewController {
     fetch()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.deselectSelectedRow(animated: true)
+  }
+  
   func configureTableView() {
     tableView.delegate = self
     tableView.dataSource = self
@@ -66,5 +71,14 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
     cell.textLabel?.text = coins[indexPath.row].name
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let selectedCoin = coins[indexPath.row]
+    let coinDetailVC = CoinDetailVC(coinID: selectedCoin.id)
+    
+    coinDetailVC.title = selectedCoin.name
+    
+    navigationController?.pushViewController(coinDetailVC, animated: true)
   }
 }
