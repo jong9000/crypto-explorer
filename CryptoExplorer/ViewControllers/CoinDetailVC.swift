@@ -10,8 +10,15 @@ import UIKit
 class CoinDetailVC: UIViewController {
   
   let coinID: String
-  let coin: Item
-  let priceLabel = UILabel()
+  var urlString = "https://jongentry.dev"
+  
+  private let priceLabel = UILabel()
+  private let imageView: UIImageView = {
+    let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+    imageView.contentMode = .scaleAspectFit
+    imageView.clipsToBounds = true
+    return imageView
+  }()
     
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,11 +26,12 @@ class CoinDetailVC: UIViewController {
     view.backgroundColor = .systemBackground
     
     configurePriceLabel()
+    configureImage()
+    fetchImage()
     fetch()
   }
   
-  init(coin: Item, coinID: String) {
-    self.coin = coin
+  init(coinID: String) {
     self.coinID = coinID
     super.init(nibName: nil, bundle: nil)
   }
@@ -34,15 +42,10 @@ class CoinDetailVC: UIViewController {
   
   func configurePriceLabel() {
     priceLabel.translatesAutoresizingMaskIntoConstraints = false
-    
-    let price = coin.item.priceBTC
-    
-    priceLabel.text = "$\(price)"
-    
-    self.view.addSubview(priceLabel)
+        
+    view.addSubview(priceLabel)
     
     let marginGuide = view.layoutMarginsGuide
-    
     
     NSLayoutConstraint.activate([
       priceLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor),
@@ -52,11 +55,38 @@ class CoinDetailVC: UIViewController {
     ])
   }
   
+  func configureImage() {
+    view.addSubview(imageView)
+    imageView.center = view.center
+  }
+  
+  func fetchImage() {
+    
+    guard let url = URL(string: urlString) else {
+      return
+    }
+    
+    let getDataTask = URLSession.shared.dataTask(with: url) { data, _, error in
+      guard let data = data, error == nil else {
+        return
+      }
+      DispatchQueue.main.async {
+        let image = UIImage(data: data)
+        self.imageView.image = image
+      }
+    }
+    getDataTask.resume()
+    
+  }
+  
+  
   func fetch() {
     NetworkManager.request(endpoint: Simple.getSimplePrice(coinID: coinID, vsCurrency: "usd") ) { (result: Result<[String: SimplePrice], Error>) in
       switch result {
       case .success(let response):
-        print(self.coinID, response[self.coinID]!)
+        DispatchQueue.main.async {
+          self.priceLabel.text = "$\(response[self.coinID]!.usd)"
+        }
       case .failure(let error):
         print(error)
       }

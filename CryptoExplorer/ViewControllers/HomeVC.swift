@@ -84,9 +84,10 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let selectedCoin = coins[indexPath.row]
     
-    let coinDetailVC = CoinDetailVC(coin: selectedCoin, coinID: selectedCoin.item.id)
+    let coinDetailVC = CoinDetailVC(coinID: selectedCoin.item.id)
     
     coinDetailVC.title = selectedCoin.item.name
+    coinDetailVC.urlString = selectedCoin.item.large
     
     navigationController?.pushViewController(coinDetailVC, animated: true)
   }
